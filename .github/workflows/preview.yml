@@ -16,5 +16,6 @@ jobs:
           build: |
             npm install
             npm run build
+            cp -r build/* public/*
       - name: Get the preview_url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
